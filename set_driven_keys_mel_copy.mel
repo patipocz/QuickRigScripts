@@ -1,0 +1,411 @@
+///'''This is a copy of MEL doing set driven key for FK/IK switchn on legs plus some random testing'''//
+
+setAttr "l_upperLeg_RE_jnt_parentConstraint1.l_upperLeg_FK_jntW1" 0;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_upperLeg_RE_jnt_parentConstraint1.l_upperLeg_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_upperLeg_RE_jnt_parentConstraint1.l_upperLeg_FK_jntW1;
+// Result: 1 // 
+setAttr "l_ankle_RE_jnt_parentConstraint1.l_ankle_FK_jntW1" 0;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ankle_RE_jnt_parentConstraint1.l_ankle_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ankle_RE_jnt_parentConstraint1.l_ankle_FK_jntW1;
+// Result: 1 // 
+setAttr "l_ball_RE_jnt_parentConstraint1.l_ball_FK_jntW1" 0;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ball_RE_jnt_parentConstraint1.l_ball_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ball_RE_jnt_parentConstraint1.l_ball_FK_jntW1;
+// Result: 1 // 
+setAttr "l_toes_RE_jnt_parentConstraint1.l_toes_FK_jntW1" 0;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_toes_RE_jnt_parentConstraint1.l_toes_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_toes_RE_jnt_parentConstraint1.l_toes_FK_jntW1;
+// Result: 1 // 
+setAttr "l_lowerLeg_RE_jnt_parentConstraint1.l_lowerLeg_FK_jntW1" 0;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_lowerLeg_RE_jnt_parentConstraint1.l_lowerLeg_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_lowerLeg_RE_jnt_parentConstraint1.l_lowerLeg_FK_jntW1;
+// Result: 1 // 
+setAttr "l_Fk_IK_switch_ctrl.FK_IK_Switch" 0;
+setAttr "l_upperLeg_RE_jnt_parentConstraint1.l_upperLeg_IK_jntW0" 0;
+setAttr "l_upperLeg_RE_jnt_parentConstraint1.l_upperLeg_FK_jntW1" 1;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_upperLeg_RE_jnt_parentConstraint1.l_upperLeg_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_upperLeg_RE_jnt_parentConstraint1.l_upperLeg_FK_jntW1;
+// Result: 1 // 
+setAttr "l_ankle_RE_jnt_parentConstraint1.l_ankle_IK_jntW0" 0;
+setAttr "l_ankle_RE_jnt_parentConstraint1.l_ankle_FK_jntW1" 1;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ankle_RE_jnt_parentConstraint1.l_ankle_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ankle_RE_jnt_parentConstraint1.l_ankle_FK_jntW1;
+// Result: 1 // 
+setAttr "l_ball_RE_jnt_parentConstraint1.l_ball_IK_jntW0" 0;
+setAttr "l_ball_RE_jnt_parentConstraint1.l_ball_FK_jntW1" 1;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ball_RE_jnt_parentConstraint1.l_ball_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ball_RE_jnt_parentConstraint1.l_ball_FK_jntW1;
+// Result: 1 // 
+setAttr "l_toes_RE_jnt_parentConstraint1.l_toes_IK_jntW0" 0;
+setAttr "l_toes_RE_jnt_parentConstraint1.l_toes_FK_jntW1" 1;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_toes_RE_jnt_parentConstraint1.l_toes_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_toes_RE_jnt_parentConstraint1.l_toes_FK_jntW1;
+// Result: 1 // 
+setAttr "l_lowerLeg_RE_jnt_parentConstraint1.l_lowerLeg_IK_jntW0" 0;
+setAttr "l_lowerLeg_RE_jnt_parentConstraint1.l_lowerLeg_FK_jntW1" 1;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_lowerLeg_RE_jnt_parentConstraint1.l_lowerLeg_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_lowerLeg_RE_jnt_parentConstraint1.l_lowerLeg_FK_jntW1;
+// Result: 1 // 
+select -cl  ;
+select -r r_Fk_IK_switch_ctrl ;
+select -r r_upperLeg_RE_jnt_parentConstraint1 ;
+select -add r_ankle_RE_jnt_parentConstraint1 ;
+select -add r_ball_RE_jnt_parentConstraint1 ;
+select -add r_toes_RE_jnt_parentConstraint1 ;
+select -add r_lowerLeg_RE_jnt_parentConstraint1 ;
+setAttr "r_upperLeg_RE_jnt_parentConstraint1.r_upperLeg_FK_jntW1" 0;
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_upperLeg_RE_jnt_parentConstraint1.r_upperLeg_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_upperLeg_RE_jnt_parentConstraint1.r_upperLeg_FK_jntW1;
+// Result: 1 // 
+setAttr "r_ankle_RE_jnt_parentConstraint1.r_ankle_FK_jntW1" 0;
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ankle_RE_jnt_parentConstraint1.r_ankle_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ankle_RE_jnt_parentConstraint1.r_ankle_FK_jntW1;
+// Result: 1 // 
+setAttr "r_ball_RE_jnt_parentConstraint1.r_ball_FK_jntW1" 0;
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ball_RE_jnt_parentConstraint1.r_ball_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ball_RE_jnt_parentConstraint1.r_ball_FK_jntW1;
+// Result: 1 // 
+setAttr "r_toes_RE_jnt_parentConstraint1.r_toes_FK_jntW1" 0;
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_toes_RE_jnt_parentConstraint1.r_toes_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_toes_RE_jnt_parentConstraint1.r_toes_FK_jntW1;
+// Result: 1 // 
+setAttr "r_lowerLeg_RE_jnt_parentConstraint1.r_lowerLeg_FK_jntW1" 0;
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_lowerLeg_RE_jnt_parentConstraint1.r_lowerLeg_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_lowerLeg_RE_jnt_parentConstraint1.r_lowerLeg_FK_jntW1;
+// Result: 1 // 
+setAttr "r_Fk_IK_switch_ctrl.FK_IK_Switch" 0;
+setAttr "r_upperLeg_RE_jnt_parentConstraint1.r_upperLeg_IK_jntW0" 0;
+setAttr "r_upperLeg_RE_jnt_parentConstraint1.r_upperLeg_FK_jntW1" 1;
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_upperLeg_RE_jnt_parentConstraint1.r_upperLeg_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_upperLeg_RE_jnt_parentConstraint1.r_upperLeg_FK_jntW1;
+// Result: 1 // 
+setAttr "r_ankle_RE_jnt_parentConstraint1.r_ankle_IK_jntW0" 0;
+setAttr "r_ankle_RE_jnt_parentConstraint1.r_ankle_FK_jntW1" 1;
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ankle_RE_jnt_parentConstraint1.r_ankle_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ankle_RE_jnt_parentConstraint1.r_ankle_FK_jntW1;
+// Result: 1 // 
+setAttr "r_ball_RE_jnt_parentConstraint1.r_ball_IK_jntW0" 0;
+setAttr "r_ball_RE_jnt_parentConstraint1.r_ball_FK_jntW1" 1;
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ball_RE_jnt_parentConstraint1.r_ball_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ball_RE_jnt_parentConstraint1.r_ball_FK_jntW1;
+// Result: 1 // 
+setAttr "r_toes_RE_jnt_parentConstraint1.r_toes_IK_jntW0" 0;
+setAttr "r_toes_RE_jnt_parentConstraint1.r_toes_FK_jntW1" 1;
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_toes_RE_jnt_parentConstraint1.r_toes_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_toes_RE_jnt_parentConstraint1.r_toes_FK_jntW1;
+// Result: 1 // 
+setAttr "r_lowerLeg_RE_jnt_parentConstraint1.r_lowerLeg_IK_jntW0" 0;
+setAttr "r_lowerLeg_RE_jnt_parentConstraint1.r_lowerLeg_FK_jntW1" 1;
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_lowerLeg_RE_jnt_parentConstraint1.r_lowerLeg_IK_jntW0;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_lowerLeg_RE_jnt_parentConstraint1.r_lowerLeg_FK_jntW1;
+// Result: 1 // 
+select -cl  ;
+select -r l_Fk_IK_switch_ctrl ;
+select -r l_upperLeg_FK_ctrl_offset ;
+select -add r_upperLeg_FK_ctrl_offset ;
+select -r l_upperLeg_FK_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r base_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -cl  ;
+select -r l_Fk_IK_switch_ctrl ;
+select -cl  ;
+select -r l_Fk_IK_switch_ctrl ;
+select -r l_knee_ctrl ;
+select -add l_foot_ctrl ;
+select -add l_ankleAdjust_ctrl ;
+select -r l_knee_ctrl ;
+select -r l_knee_ctrl ;
+rename "l_knee_ctrl" "l_knee_IK_ctrl";
+// Result: l_knee_IK_ctrl // 
+select -r l_foot_ctrl ;
+select -r l_foot_ctrl ;
+select -r l_foot_ctrl ;
+rename "l_foot_ctrl" "l_foot_IK_ctrl";
+// Result: l_foot_IK_ctrl // 
+select -r l_ankleAdjust_ctrl ;
+rename "l_ankleAdjust_ctrl" "l_ankleAdjust_IK_ctrl";
+// Result: l_ankleAdjust_IK_ctrl // 
+select -r l_ankle_ctrl ;
+rename "l_ankle_ctrl" "l_ankle_IK_ctrl";
+// Result: l_ankle_IK_ctrl // 
+select -r l_ankle_ctrl_auto ;
+rename "l_ankle_ctrl_auto" "l_ankle_IK_ctrl_auto";
+// Result: l_ankle_IK_ctrl_auto // 
+select -r l_ankle_ctrl_offset ;
+rename "l_ankle_ctrl_offset" "l_ankle_IK_ctrl_offset";
+// Result: l_ankle_IK_ctrl_offset // 
+select -r l_ankleAdjust_ctrl_auto ;
+rename "l_ankleAdjust_ctrl_auto" "l_ankleAdjust_IK_ctrl_auto";
+// Result: l_ankleAdjust_IK_ctrl_auto // 
+select -r l_ankleAdjust_ctrl_offset ;
+rename "l_ankleAdjust_ctrl_offset" "l_ankleAdjust_IK_ctrl_offset";
+// Result: l_ankleAdjust_IK_ctrl_offset // 
+select -r l_foot_ctrl_auto ;
+rename "l_foot_ctrl_auto" "l_foot_IK_ctrl_auto";
+// Result: l_foot_IK_ctrl_auto // 
+select -r l_foot_ctrl_offset ;
+rename "l_foot_ctrl_offset" "l_foot_IK_ctrl_offset";
+// Result: l_foot_IK_ctrl_offset // 
+select -r l_knee_ctrl_auto ;
+rename "l_knee_ctrl_auto" "l_knee_IK_ctrl_auto";
+// Result: l_knee_IK_ctrl_auto // 
+select -r l_knee_ctrl_offset ;
+rename "l_knee_ctrl_offset" "l_knee_IK_ctrl_offset";
+// Result: l_knee_IK_ctrl_offset // 
+select -r l_leg_IK_ctrls_grp ;
+select -r l_knee_IK_ctrl_offset ;
+select -r l_knee_IK_ctrl ;
+select -r l_foot_IK_ctrl ;
+select -r l_ankleAdjust_IK_ctrl ;
+select -r l_ankle_IK_ctrl ;
+select -r l_toes_ctrl ;
+select -r l_toes_ctrl ;
+rename "l_toes_ctrl" "l_toes_IK_ctrl";
+// Result: l_toes_IK_ctrl // 
+select -r l_toes_ctrl_auto ;
+rename "l_toes_ctrl_auto" "l_toes_IK_ctrl_auto";
+// Result: l_toes_IK_ctrl_auto // 
+select -r l_toes_ctrl_offset ;
+rename "l_toes_ctrl_offset" "l_toes_IK_ctrl_offset";
+// Result: l_toes_IK_ctrl_offset // 
+select -r l_toes_IK_ctrl_auto ;
+select -r l_toes_IK_ctrl ;
+select -add l_ankle_IK_ctrl ;
+select -add l_ankleAdjust_IK_ctrl ;
+select -add l_foot_IK_ctrl ;
+select -add l_knee_IK_ctrl ;
+select -r r_toes_ctrl_offset ;
+parent r_toes_ctrl_offset r_leg_IK_ctrls_grp ;
+// Result: r_toes_ctrl_offset // 
+select -r r_toes_ctrl ;
+select -r r_toes_ctrl ;
+select -r r_leg_IK_ctrls_grp ;
+select -r r_foot_ctrl_offset r_foot_ctrl_auto r_foot_ctrl r_ankleAdjust_ctrl_offset r_ankleAdjust_ctrl_auto r_ankleAdjust_ctrl r_ankle_ctrl_offset r_ankle_ctrl_auto r_ankle_ctrl r_knee_ctrl_offset r_knee_ctrl_auto r_knee_ctrl r_toes_ctrl_offset r_toes_ctrl_auto r_toes_ctrl ;
+searchReplaceNames "_ctrl" "_IK_ctrl" "selected";
+// Replaced 15 names.
+select -r base_ctrl ;
+select -r l_toes_IK_ctrl ;
+select -add l_ankle_IK_ctrl ;
+select -add l_ankleAdjust_IK_ctrl ;
+select -add l_foot_IK_ctrl ;
+select -add l_knee_IK_ctrl ;
+select -add l_upperLeg_FK_ctrl ;
+select -add l_lowerLeg_FK_ctrl ;
+select -add l_ankle_FK_ctrl ;
+select -add l_ball_FK_ctrl ;
+setAttr "l_knee_IK_ctrl.visibility" 0;
+setAttr "l_toes_IK_ctrl.visibility" 0;
+setAttr "l_ankle_IK_ctrl.visibility" 0;
+setAttr "l_ankleAdjust_IK_ctrl.visibility" 0;
+setAttr "l_foot_IK_ctrl.visibility" 0;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_toes_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ankle_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ankleAdjust_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_foot_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_knee_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_upperLeg_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_lowerLeg_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ankle_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ball_FK_ctrl.visibility;
+// Result: 1 // 
+setAttr "l_Fk_IK_switch_ctrl.FK_IK_Switch" 1;
+setAttr "l_toes_IK_ctrl.visibility" 1;
+setAttr "l_ankle_IK_ctrl.visibility" 1;
+setAttr "l_ankleAdjust_IK_ctrl.visibility" 1;
+setAttr "l_foot_IK_ctrl.visibility" 1;
+setAttr "l_knee_IK_ctrl.visibility" 1;
+setAttr "l_upperLeg_FK_ctrl.visibility" 0;
+setAttr "l_lowerLeg_FK_ctrl.visibility" 0;
+setAttr "l_ankle_FK_ctrl.visibility" 0;
+setAttr "l_ball_FK_ctrl.visibility" 0;
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_toes_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ankle_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ankleAdjust_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_foot_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_knee_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_upperLeg_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_lowerLeg_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ankle_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver l_Fk_IK_switch_ctrl.FK_IK_Switch l_ball_FK_ctrl.visibility;
+// Result: 1 // 
+select -r l_Fk_IK_switch_ctrl ;
+setAttr "l_Fk_IK_switch_ctrl.FK_IK_Switch" 0;
+setAttr "l_Fk_IK_switch_ctrl.FK_IK_Switch" 1;
+setAttr "l_Fk_IK_switch_ctrl.FK_IK_Switch" 0;
+select -r l_upperLeg_FK_ctrl_offset ;
+select -add l_leg_IK_ctrls_grp ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r r_leg_IK_ctrls_grp ;
+select -r r_thighJiggle_001_RE_ctrl_offset ;
+select -r r_upperLeg_FK_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -cl  ;
+select -r r_Fk_IK_switch_ctrl ;
+select -r r_toes_IK_ctrl ;
+select -add r_knee_IK_ctrl ;
+select -add r_ankle_IK_ctrl ;
+select -add r_ankleAdjust_IK_ctrl ;
+select -add r_foot_IK_ctrl ;
+select -add r_upperLeg_FK_ctrl ;
+select -add r_lowerLeg_FK_ctrl ;
+select -add r_ankle_FK_ctrl ;
+select -add r_ball_FK_ctrl ;
+setAttr "r_toes_IK_ctrl.visibility" 0;
+setAttr "r_knee_IK_ctrl.visibility" 0;
+setAttr "r_ankle_IK_ctrl.visibility" 0;
+setAttr "r_ankleAdjust_IK_ctrl.visibility" 0;
+setAttr "r_foot_IK_ctrl.visibility" 0;
+pickWalk -d up;
+// Result: r_upperLeg_FK_ctrl_auto // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_toes_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_knee_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ankle_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ankleAdjust_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_foot_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_upperLeg_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_lowerLeg_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ankle_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ball_FK_ctrl.visibility;
+// Result: 1 // 
+setAttr "r_Fk_IK_switch_ctrl.FK_IK_Switch" 1;
+setAttr "r_toes_IK_ctrl.visibility" 1;
+setAttr "r_knee_IK_ctrl.visibility" 1;
+setAttr "r_ankle_IK_ctrl.visibility" 1;
+setAttr "r_ankleAdjust_IK_ctrl.visibility" 1;
+setAttr "r_foot_IK_ctrl.visibility" 1;
+setAttr "r_upperLeg_FK_ctrl.visibility" 0;
+setAttr "r_lowerLeg_FK_ctrl.visibility" 0;
+setAttr "r_ankle_FK_ctrl.visibility" 0;
+setAttr "r_ball_FK_ctrl.visibility" 0;
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_toes_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_knee_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ankle_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ankleAdjust_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_foot_IK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_upperLeg_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_lowerLeg_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ankle_FK_ctrl.visibility;
+// Result: 1 // 
+setDrivenKeyframe -currentDriver r_Fk_IK_switch_ctrl.FK_IK_Switch r_ball_FK_ctrl.visibility;
+// Result: 1 // 
+select -cl  ;
+select -r r_Fk_IK_switch_ctrl ;
+select -r l_Fk_IK_switch_ctrl ;
+SnapToGridRelease; dR_enterForSnap;
+select -r l_leg_IK_ctrls_grp ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r r_foot_IK_ctrl r_ankleAdjust_IK_ctrl_offset ;
+select -cl  ;
+select -r l_upperLeg_FK_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -cl  ;
+select -r l_Fk_IK_switch_ctrl ;
+setAttr "l_Fk_IK_switch_ctrl.FK_IK_Switch" 1;
+select -r l_ankleAdjust_IK_ctrl ;
+move -r -os -wd 0 0 49.221399 ;
+select -cl  ;
+select -r r_ankle_FK_jnt r_ankle_IK_jnt l_lowerLeg_IK_jnt r_ankle_RE_jnt l_lowerLeg_RE_jnt ;
+select -r base_ctrl ;
+// Undo: select -r base_ctrl  // 
+// Undo: select -r r_ankle_FK_jnt r_ankle_IK_jnt l_lowerLeg_IK_jnt r_ankle_RE_jnt l_lowerLeg_RE_jnt  // 
+// Undo: select -cl   // 
+// Undo: move -r -os -wd 0 0 49.221399  // 
+move -r -os -wd 0 0 58.733827 ;
+move -r -os -wd 0 0 -11.724667 ;
+move -r -os -wd 0 0 -19.663719 ;
+move -r -os -wd 0 0 -8.747592 ;
+// Undo: move -r -os -wd 0 0 -8.747592  // 
+// Undo: move -r -os -wd 0 0 -19.663719  // 
+// Undo: move -r -os -wd 0 0 -11.724667  // 
+// Undo: move -r -os -wd 0 0 58.733827  // 
+select -r l_ankle_IK_ctrl ;
+move -r -os -wd -34.051746 0 0 ;
+// Undo: move -r -os -wd -34.051746 0 0  // 
+select -r l_foot_IK_ctrl ;
+move -r -0.0992361 86.13462 147.455482 ;
+// Undo: move -r -0.0992361 86.13462 147.455482  // 
+// Undo: select -r l_foot_IK_ctrl  // 
+select -cl  ;
+file -save;
+// Result: C:/Users/poczk/Documents/maya/projects/Spinosaurus_Frontier/scenes/Spinosaurus_Geometry_Proxy_Geo_012.ma // 
+file -save;
+// Result: C:/Users/poczk/Documents/maya/projects/Spinosaurus_Frontier/scenes/Spinosaurus_Geometry_Proxy_Geo_012.ma // 
+select -r l_calfJiggle_001_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r l_thighJiggle_001_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r r_thighJiggle_001_RE_ctrl_offset ;
+select -r l_thumbToe_002_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r l_thumbToe_001_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r l_outsideToe_003_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r l_outsideToe_002_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r l_outsideToe_001_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r l_insideToe_003_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r l_insideToe_002_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r l_insideToe_001_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r l_middleToe_003_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r l_middleToe_002_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
+select -r l_middleToe_001_RE_ctrl_offset ;
+toggleVisibilityAndKeepSelection `optionVar -query toggleVisibilityAndKeepSelectionBehaviour`;
